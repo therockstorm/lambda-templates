@@ -1,0 +1,18 @@
+service: go
+
+provider:
+  memorySize: 128
+  name: aws
+  region: us-west-2
+  runtime: go1.x
+  timeout: 10
+
+package:
+  exclude:
+    - ./**
+  include:
+    - ./bin/**
+
+functions:
+  func:
+    handler: bin/go

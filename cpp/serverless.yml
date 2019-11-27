@@ -1,0 +1,15 @@
+service: cpp
+
+provider:
+  memorySize: 128
+  name: aws
+  region: us-west-2
+  runtime: provided
+  timeout: 10
+
+package:
+  artifact: ./cpp.zip
+
+functions:
+  func:
+    handler: cpp

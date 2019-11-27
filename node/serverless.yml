@@ -1,0 +1,21 @@
+service: node
+
+provider:
+  memorySize: 128
+  name: aws
+  region: us-west-2
+  runtime: nodejs12.x
+  timeout: 10
+  environment:
+    AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
+
+custom:
+  webpack:
+    includeModules: true
+
+plugins:
+  - serverless-webpack
+
+functions:
+  func:
+    handler: handler.node

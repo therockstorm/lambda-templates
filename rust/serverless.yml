@@ -1,0 +1,18 @@
+service: rust
+
+provider:
+  memorySize: 128
+  name: aws
+  region: us-west-2
+  runtime: rust
+  timeout: 10
+
+package:
+  individually: true
+
+plugins:
+  - serverless-rust
+
+functions:
+  func:
+    handler: rust
