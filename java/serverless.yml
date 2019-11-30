@@ -1,0 +1,15 @@
+service: java
+
+provider:
+  memorySize: 128
+  name: aws
+  region: us-west-2
+  runtime: java8
+  timeout: 10
+
+package:
+  artifact: build/distributions/java.zip
+
+functions:
+  func:
+    handler: com.serverless.Handler

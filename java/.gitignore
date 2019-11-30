@@ -1,0 +1,15 @@
+.DS_Store
+*.class
+*.jar
+*.war
+*.ear
+
+.classpath/
+.gradle/
+.idea/
+.project/
+.serverless/
+.settings/
+.vscode/
+bin/
+build/
